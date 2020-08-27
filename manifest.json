@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Selection Extension",
+    "description": "Search your selected text",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "http://*/*",
+      "https://*/*",
+      "contextMenus"
+    ],
+    "background": {
+      "scripts": [
+        "background.js"
+      ],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_title": "Mark it!!"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content_script.js"]
+      }
+    ]
+}
